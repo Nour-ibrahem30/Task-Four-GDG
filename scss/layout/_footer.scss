@@ -1,0 +1,46 @@
+footer {
+  padding-top: $padding-section;
+
+  .Imgs img {
+    width: 100%;
+  }
+
+  .Links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 130px;
+    padding: 20px;
+
+    p {
+      color: $color-text;
+    }
+
+    ul li {
+      margin-top: 15px;
+      color: $color-paragraph;
+    }
+  }
+
+  .Icons {
+    text-align: center;
+    color: $color-text;
+    margin-left: 5px;
+    padding-bottom: 25px;
+    margin-top: 10px;
+
+    i {
+      margin-left: 15px;
+      font-size: 18px;
+    }
+  }
+
+  .Copy-Right {
+    color: $color-text;
+    text-align: center;
+    padding: 15px;
+
+    > span {
+      color: cyan;
+    }
+  }
+}

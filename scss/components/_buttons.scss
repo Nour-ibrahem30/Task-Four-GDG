@@ -1,0 +1,19 @@
+button {
+  width: 165px;
+  height: 45px;
+  padding: 5px;
+  border-radius: $border-radius-btn;
+  border: none;
+  background-color: $color-primary;
+  color: $color-text;
+  position: relative;
+  font-weight: bold;
+
+  &::before {
+    content: "\f290";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+  }
+}

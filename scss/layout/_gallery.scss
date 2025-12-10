@@ -1,0 +1,64 @@
+.Gallery {
+  padding-top: $padding-section;
+  padding-bottom: $padding-section;
+
+  h2 {
+    margin-left: 20px;
+    color: $color-text;
+  }
+
+  .container .Parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+    text-align: center;
+    justify-content: center;
+
+    .Price {
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+
+      p {
+        color: $color-text;
+        font-weight: bold;
+        font-size: 18px;
+
+        &:nth-child(2) {
+          opacity: 0.4;
+        }
+      }
+    }
+
+    .Imgs {
+      position: relative;
+      border-radius: $border-radius;
+      overflow: hidden;
+
+      &::before {
+        @include pseudo-element(100%, 100%, rgba(0, 0, 0, 0.85));
+        bottom: 0;
+        z-index: 2;
+        transition: $transition;
+        border-radius: $border-radius;
+        opacity: 0;
+        @include flex-center;
+        text-align: center;
+        font-size: 18px;
+        color: $color-text;
+        line-height: 1.8;
+        word-spacing: 2px;
+      }
+
+      &:hover::before {
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iste ducimus!';
+        opacity: 1;
+      }
+    }
+
+    img {
+      height: 450px;
+      border-radius: $border-radius;
+    }
+  }
+}

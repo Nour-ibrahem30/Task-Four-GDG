@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+button {
+  width: 165px;
+  height: 45px;
+  padding: 5px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(227, 44, 137);
+  color: white;
+  position: relative;
+  font-weight: bold;
+}
+button::before {
+  content: "\f290";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 15px;
+}
+
+.Head {
+  background-image: url(../../assets/images/Imges/Img-One.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+}
+.Head .list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  font-size: 18px;
+}
+.Head a {
+  text-decoration: none;
+  color: white;
+}
+.Head ul {
+  display: flex;
+}
+.Head ul li {
+  margin-right: 20px;
+  color: white;
+  position: relative;
+}
+.Head ul li:hover::before {
+  width: 100%;
+}
+.Head ul a li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.Head .text {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 165px;
+  color: white;
+}
+
+.Section {
+  display: flex;
+  gap: 100px;
+}
+.Section .parent {
+  background-color: rgb(249, 228, 227);
+  padding: 15px;
+  width: 800px;
+}
+.Section .parent .F-One {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+.Section .parent .F-One.imgs img {
+  height: 200px;
+}
+.Section .parent .F-One h2 {
+  color: rgb(227, 44, 137);
+  position: relative;
+}
+.Section .parent .F-One h2::before {
+  content: "";
+  position: absolute;
+  width: 47%;
+  height: 2px;
+  background-color: rgb(227, 44, 137);
+  bottom: -1px;
+  right: 48px;
+}
+.Section .parent .F-One .Text .Price p {
+  color: rgb(227, 44, 137);
+  font-weight: bold;
+}
+.Section .Parent-Two {
+  text-align: center;
+  width: 600px;
+}
+.Section .Parent-Two .Text h2 {
+  color: white;
+}
+.Section .Parent-Two .Text p {
+  color: #777;
+}
+.Section .Parent-Two p {
+  color: rgb(227, 44, 137);
+  font-size: 18px;
+}
+.Section .Parent-Two .icons i {
+  margin-right: 35px;
+  font-size: 20px;
+  color: white;
+}
+.Section .Parent-Two .icons i:nth-child(3) {
+  color: rgb(227, 44, 137);
+}
+
+.Gallery {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.Gallery h2 {
+  margin-left: 20px;
+  color: white;
+}
+.Gallery .container .Parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+  text-align: center;
+  justify-content: center;
+}
+.Gallery .container .Parent .Price {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.Gallery .container .Parent .Price p {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+.Gallery .container .Parent .Price p:nth-child(2) {
+  opacity: 0.4;
+}
+.Gallery .container .Parent .Imgs {
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.Gallery .container .Parent .Imgs::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  bottom: 0;
+  z-index: 2;
+  transition: 0.5s;
+  border-radius: 50px;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  line-height: 1.8;
+  word-spacing: 2px;
+}
+.Gallery .container .Parent .Imgs:hover::before {
+  content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iste ducimus!";
+  opacity: 1;
+}
+.Gallery .container .Parent img {
+  height: 450px;
+  border-radius: 50px;
+}
+
+footer {
+  padding-top: 60px;
+}
+footer .Imgs img {
+  width: 100%;
+}
+footer .Links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 130px;
+  padding: 20px;
+}
+footer .Links p {
+  color: white;
+}
+footer .Links ul li {
+  margin-top: 15px;
+  color: #777;
+}
+footer .Icons {
+  text-align: center;
+  color: white;
+  margin-left: 5px;
+  padding-bottom: 25px;
+  margin-top: 10px;
+}
+footer .Icons i {
+  margin-left: 15px;
+  font-size: 18px;
+}
+footer .Copy-Right {
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+footer .Copy-Right > span {
+  color: cyan;
+}/*# sourceMappingURL=main.css.map */

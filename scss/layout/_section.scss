@@ -1,0 +1,67 @@
+.Section {
+  display: flex;
+  gap: 100px;
+
+  .parent {
+    background-color: $color-bg-light;
+    padding: 15px;
+    width: 800px;
+
+    .F-One {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      text-align: center;
+
+      &.imgs img {
+        height: 200px;
+      }
+
+      h2 {
+        color: $color-primary;
+        position: relative;
+
+        &::before {
+          @include pseudo-element(47%, 2px, $color-primary);
+          bottom: -1px;
+          right: 48px;
+        }
+      }
+
+      .Text .Price p {
+        color: $color-primary;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .Parent-Two {
+    text-align: center;
+    width: 600px;
+
+    .Text {
+      h2 {
+        color: $color-text;
+      }
+
+      p {
+        color: $color-paragraph;
+      }
+    }
+
+    p {
+      color: $color-primary;
+      font-size: 18px;
+    }
+
+    .icons i {
+      margin-right: 35px;
+      font-size: 20px;
+      color: $color-text;
+
+      &:nth-child(3) {
+        color: $color-primary;
+      }
+    }
+  }
+}

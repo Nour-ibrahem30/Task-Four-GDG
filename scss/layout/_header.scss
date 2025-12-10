@@ -1,0 +1,47 @@
+.Head {
+  background-image: url(../../assets/images/Imges/Img-One.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+
+  .list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-text;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      margin-right: 20px;
+      color: $color-text;
+      position: relative;
+
+      &:hover::before {
+        width: 100%;
+      }
+    }
+
+    a li::before {
+      @include pseudo-element(0, 3px, white);
+      bottom: -8px;
+      transition: $transition;
+    }
+  }
+
+  .text {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 165px;
+    color: $color-text;
+  }
+}
